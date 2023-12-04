@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .search-input{
+    font-size: 14px;
+}
+
+.search-btn {
+    border: none;
+    background-color: #4a6fff;
+    margin-left: -30px;
+    border-radius: 0 7px 7px 0;
+}
+
+.search-btn:hover{
+    background-color: #2047e2;
+}
+
+.search-btn img{
+    height: 16px;
+}

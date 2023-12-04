@@ -1,0 +1,25 @@
+<div class="container mt-4 col-md-6">
+    <div class="header">
+        <h1>Adopter List</h1>
+        <a routerLink="/add-adopter" class="btn btn-primary">Add New Adopter</a>
+      </div>
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let adopter of adopters">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <div><strong>ID:</strong> {{ adopter.userId }}</div>
+            <div><strong>Name:</strong> {{ adopter.name }}</div>
+            <div><strong>Email:</strong> {{ adopter.email }}</div>
+            <div><strong>Contact:</strong> {{ adopter.contactNo }}</div>
+          </div>
+          <div>
+            <div class="btn-group" role="group" aria-label="Adopter Actions">
+              <button class="btn btn-primary" (click)="viewAdopter(adopter.userId)">View</button>
+              <button class="btn btn-success" (click)="editAdopter(adopter.userId)">Edit</button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

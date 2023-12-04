@@ -1,0 +1,37 @@
+<div class="container mt-4 col-md-6">
+    <div class="header">
+        <h1>Employee Details</h1>
+      </div>
+    <ul class="list-group mt-3">
+      <li class="list-group-item">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <div><strong>ID:</strong> {{ employee.userId }}</div>
+            <div><strong>Name:</strong> {{ employee.name }}</div>
+            <div><strong>Email:</strong> {{ employee.email }}</div>
+            <div><strong>Contact:</strong> {{ employee.contactNo }}</div>
+            <div><strong>Designation:</strong> {{ employee.designation }}</div>
+            <div><strong>User Name:</strong> {{ employee.userName }}</div>
+            <div><strong>Password:</strong>{{ maskPassword(employee.password) }}</div>
+            <div><strong>Locality</strong> {{ employee.address.locality }}</div>
+            <div><strong>City:</strong> {{ employee.address.city }}</div>
+            <div><strong>Status:</strong> {{ employee.address.state }}</div>
+            <div><strong>Status:</strong> {{ employee.status }}</div>
+          </div>
+          <div>
+            <button class="btn btn-primary" (click)="backToList()">Back To List</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  
+  

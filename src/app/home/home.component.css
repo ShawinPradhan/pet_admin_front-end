@@ -1,0 +1,23 @@
+
+/* Hero Section */
+.hero {
+    background-image: url('https://www.saskspca.ca/wp-content/uploads/2022/01/dog-2606759_1920-1500x600.jpg'); /* Replace this with your image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+  }
+
+  
+ 
+  /* About Section */
+  .about {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+
+   /* Contact Section */
+   .contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }

@@ -1,0 +1,104 @@
+
+  <div class="container">
+    <h2>Add New Pet Details</h2>
+    <div class="form-container">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">Pet Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name"
+                formControlName="name" [(ngModel)]="pet.name">
+                <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['name'].errors &&  f['name'].errors['required'] ">
+                        Name is mandatory**
+                    </div>
+                    <div *ngIf="f['name'].errors &&  f['name'].errors['minlength'] ">
+                        Minimum length must be 3 characters**
+                    </div>
+                    <div *ngIf="f['name'].errors &&  f['name'].errors['maxlength'] ">
+                        Maximum 30 characters allowed**
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="breed">Breed:</label>
+                <input type="text" class="form-control" id="breed" placeholder="Enter breed"
+                formControlName="breed" [(ngModel)]="pet.breed">
+                <div *ngIf="f['breed'].touched && f['breed'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['breed'].errors &&  f['breed'].errors['required'] ">
+                        Email is mandatory**
+                    </div>
+                    <div *ngIf="f['breed'].errors &&  f['breed'].errors['minlength'] ">
+                        Minimum length must be 3 characters**
+                    </div>
+                    <div *ngIf="f['breed'].errors &&  f['breed'].errors['maxlength'] ">
+                        Maximum 30 characters allowed**
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <input type="text" class="form-control" id="designation" placeholder="Enter category"
+                formControlName="category" [(ngModel)]="pet.category">
+                <div *ngIf="f['category'].touched && f['category'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['category'].errors &&  f['category'].errors['required'] ">
+                        Category is mandatory**
+                    </div>
+                    <div *ngIf="f['category'].errors &&  f['category'].errors['minlength'] ">
+                        Minimum length must be 3 characters**
+                    </div>
+                    <div *ngIf="f['category'].errors &&  f['category'].errors['maxlength'] ">
+                        Maximum 10 characters allowed**
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dor">Date Of Rescue:</label>
+                <input type="date" class="form-control" id="locality" placeholder="Enter Date Of Rescue"
+                formControlName="dor" [(ngModel)]="pet.dateOfRescue">
+                <div *ngIf="f['dor'].touched && f['dor'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['dor'].errors &&  f['dor'].errors['required'] ">
+                        Date Of Rescue is mandatory**
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="fund">Fund:</label>
+                <input type="number" class="form-control" id="locality" placeholder="Enter Fund"
+                [(ngModel)]="pet.fund" formControlName="fund">
+                <div *ngIf="f['fund'].touched && f['fund'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['fund'].errors &&  f['fund'].errors['required'] ">
+                        Fund is mandatory**
+                    </div>
+                    <div *ngIf="f['fund'].errors &&  f['fund'].errors['min'] ">
+                        Negative value not allowed**
+                    </div>
+                </div>
+            </div>
+
+           
+            <div>
+                <label for="image">Image:</label>
+                <input type="file" id="image" class="form-control" accept="image/*" (change)="onFileChange($event)">
+              </div>
+            <br>
+            <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  
